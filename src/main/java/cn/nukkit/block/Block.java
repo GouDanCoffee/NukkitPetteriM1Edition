@@ -889,7 +889,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
                     .map(Enchantment::getLevel).orElse(0);
 
             if (canHarvest && efficiencyLevel > 0) {
-                speedMultiplier += efficiencyLevel ^ 2 + 1;
+                speedMultiplier += Math.pow(efficiencyLevel, 2) + 1;
             }
 
             if (hasteEffectLevel > 0) {
